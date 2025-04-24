@@ -1,4 +1,4 @@
-extract_file_name = lambda full_file_name: full_file_name.split('/')[-1].split('.')[0]
+extract_file_name = lambda full_file_name: full_file_name.split('/')[-1].split('.')[0] # noqa: E731
 
 def encrypt_sentence(sentence):
     first_half = []
