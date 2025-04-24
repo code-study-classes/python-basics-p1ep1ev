@@ -15,9 +15,9 @@ class TestStringsFunctions:
         ('C:/Users/example.txt', 'example'),
         ('../index.html', 'index'),
         ('/home/user/photo.jpg', 'photo'),
-        ('archive.tar.gz', 'archive') 
+        ('archive.tar.gz', 'archive')
     ], ids=["windows_path", "relative_path", "unix_path", 
-            "double_extension", "no_extension", "hidden_file"])
+            "double_extension"])
     def test_extract_file_name(self, path, expected):
         assert extract_file_name(path) == expected
     
@@ -60,9 +60,9 @@ class TestStringsFunctions:
         ('HeLLO', 2),
         ('rhythm', 1),
         ('AeIoU', 1), 
-        ('xyz', 0), 
+        ('xyz', 1), 
         ('', 0), 
     ], ids=["mixed_case", "all_upper", "only_y", 
-            "all_vowels", "no_vowels", "empty"])
+            "all_vowels", "only_y", "empty"])
     def test_count_vowel_groups(self, word, count):
         assert count_vowel_groups(word) == count
